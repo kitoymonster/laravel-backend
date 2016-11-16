@@ -15,7 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('names', 'PersonController', array('only' => array('index')));
+Route::resource('names', 'personController', array('only' => array('index')));
 //Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/entrytest', function () {
+    $entry = \App\Entry::all();
+    return view('welcome', compact('entry'));
+});

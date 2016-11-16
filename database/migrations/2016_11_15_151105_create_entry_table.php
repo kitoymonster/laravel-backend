@@ -12,10 +12,11 @@ class CreateEntryTable extends Migration
      */
     public function up()
     {
-        Schema::create('at_entry', function (Blueprint $table) {
+        Schema::create('entry', function (Blueprint $table) {
             $table->increments('id');
-			$table->string('maintenance_name');
-            $table->timestamps();
+	    $table->string('maintenance_name');
+            $table->integer('interval');
+	    $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateEntryTable extends Migration
      */
     public function down()
     {
-        Schema::drop('at_entry');
+        Schema::drop('entry');
     }
 }

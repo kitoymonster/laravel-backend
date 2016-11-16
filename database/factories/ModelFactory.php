@@ -19,3 +19,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Entry::class, function (Faker\Generator $faker) {
+    return [
+        'maintenance_name' => $faker->name,
+        'interval' => $faker->unique()->numberBetween($min = 0, $max = 1000000),
+    ];
+});
+

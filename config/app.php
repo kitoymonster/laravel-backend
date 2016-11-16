@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost:8888'),
+    'url' => env('APP_URL', 'http://mm.maniniyot.org'),
 
     /*
     |--------------------------------------------------------------------------
